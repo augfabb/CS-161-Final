@@ -34,6 +34,7 @@ int calcTotal();
 int main(int argc, char* argv[]) {
     int goal;
     int total;
+    int missedBy = 0;
 
     welcome();
 
@@ -43,10 +44,14 @@ int main(int argc, char* argv[]) {
         cout << "No miles were tracked this week:(" << endl;
         exit(0);
     }
-    calcTotal();
+    total = calcTotal();
 
     cout << "You rode a total of " << total << " miles this week." << endl;
     
+    missedBy = goal - total;
+    if (total < goal) {
+        cout << "Uh oh! You missed your goal by " << missedBy << " miles.";
+    }
 
 
   return 0;
@@ -64,7 +69,7 @@ int calcTotal() {
     int total = 0;
     int miles= 0;
     string days[7] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
-    for (int i = 1; i <=7; i++) {
+    for (int i = 0; i <7; i++) {
         cout << "How many miles did you ride on " << days[i] << "? ";
         cin >> miles;
         if (miles < 0) {
