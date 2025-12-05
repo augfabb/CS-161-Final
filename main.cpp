@@ -98,21 +98,41 @@ Program Description:
 
 Design:
 A. INPUT
-Define the input variables including name data type. 
+int goal;
+
 
 B. OUTPUT
-Define the output variables including data types. 
+int missedBy;
+int total;
 
 C. CALCULATIONS
-Describe calculations used by algorithms in step D.  
-List all formulas. 
-If there are no calculations needed, state there are no calculations.
-
+CALL Calctotal
 D. LOGIC and ALGORITHMS
-Design the logic of your program using pseudocode or flowcharts. 
-Use conditionals, loops, functions or array constructs.
-List the steps in transforming inputs into outputs. 
-https://github.com/Glen-Sasek-PCC-Instructor/2025-06-22/blob/main/Pseudocode-Reference.txt
+    int goal;
+    int total;
+    int missedBy = 0;
+
+    CALL welcome();
+
+    CALL getInput(goal);
+
+    IF (goal <= 0) {
+        cout << "No miles were tracked this week:(" << endl;
+        exit(0);
+    }
+    ASSIGN total = calcTotal();
+
+    OUTPUT cout << "You rode a total of " << total << " miles this week." << endl;
+    
+    ASSIGN missedBy = goal - total;
+    IF (total < goal) {
+        OUTPUT cout << "Uh oh! You missed your goal by " << missedBy << " miles.";
+    }
+
+
+  return 0;
+}
+
 
 
 SAMPLE RUNS
