@@ -136,6 +136,20 @@ D. LOGIC and ALGORITHMS
 
 
 SAMPLE RUNS
-Copy from assignment document.
+Welcome to my miles tracker program!
+How many miles do you want to ride this week?
+50
+How many miles did you ride on Sunday? -9
+Invalid input. Miles cannot be negative.
+How many miles did you ride on Sunday? -3
+Invalid input. Miles cannot be negative.
+How many miles did you ride on Sunday? 0
+How many miles did you ride on Monday? 10
+How many miles did you ride on Tuesday? 10
+How many miles did you ride on Wednesday? 10
+How many miles did you ride on Thursday? 10
+How many miles did you ride on Friday? 10
+How many miles did you ride on Saturday? 0
+You rode a total of 50 miles this week.
 
 */
